@@ -1,0 +1,5 @@
+div:hover {
+    background-color: rebeccapurple;
+    width: 400px;
+    transition: width 2s
+}

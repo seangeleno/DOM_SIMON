@@ -2,3 +2,9 @@ h1 {
 
   margin-left: 50%;
 }
+
+.firstSquare:hover {
+
+  width: 500px;
+  transition: width 2s;
+}
