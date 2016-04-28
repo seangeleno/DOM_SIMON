@@ -15,14 +15,14 @@
       document.body.removeChild(startButton);
       // startButton.style.display = "none";
 
-      function newStyle () {
+      (function newStyle () {
          var headID = document.getElementsByTagName('head')[0];
-         var newScript = document.createElement('style');
-         newScript.href = './newStyle.css';
+         var newScript = document.createElement('link');
+         newScript.href = 'newStyle.css';
          newScript.type = 'text/css';
          newScript.rel = 'stylesheet';
          headID.appendChild(newScript);
-      }();
+      }());
 
       let container = document.createElement('div');
 
