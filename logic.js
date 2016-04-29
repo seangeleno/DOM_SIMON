@@ -38,8 +38,7 @@
       firstSquare.style.display = "inline-block";
       firstSquare.className = ('firstSquare');
 
-
-
+      /*Event Listeners*/
       firstSquare.addEventListener('click', function(){
 
         playerArray.push("1");
@@ -58,6 +57,22 @@
 
       });
 
+      firstSquare.addEventListener('mouseover', function(){
+        console.warn("I'm hovering on blue square");
+
+        firstSquare.style.width = "350px";
+        firstSquare.style.transition = "width 2s";
+
+      });
+
+      firstSquare.addEventListener('mouseout', function(){
+        console.info("I'm leaving the blue square");
+
+        firstSquare.style.width = "150px";
+        firstSquare.style.transition = "width 2s";
+      });
+
+      /* Second Square - color GREEN */
       secondSquare.style.height = "150px";
       secondSquare.style.width = "150px";
       secondSquare.style.backgroundColor = "red";
@@ -75,21 +90,23 @@
 
       });
 
-      fourthSquare.addEventListener('mouseover', function(){
-        console.warn("I'm hovering on yellow square");
+      secondSquare.addEventListener('mouseover', function(){
+        console.warn("I'm hovering on red square");
 
-        fourthSquare.style.width = "350px";
-        fourthSquare.style.transition = "width 2s";
+        secondSquare.style.width = "350px";
+        secondSquare.style.transition = "width 2s";
 
       });
 
-      fourthSquare.addEventListener('mouseout', function(){
-        console.info("I'm leaving the yellow square");
+      secondSquare.addEventListener('mouseout', function(){
+        console.info("I'm leaving the red square");
 
-        fourthSquare.style.width = "150px";
-        fourthSquare.style.transition = "width 2s";
+        secondSquare.style.width = "150px";
+        secondSquare.style.transition = "width 2s";
       })
 
+
+      /* Third Square - color red */
       thirdSquare.style.height = "150px";
       thirdSquare.style.width = "150px";
       thirdSquare.style.backgroundColor = "green";
@@ -104,6 +121,21 @@
         playerArray.push("2");
         console.info(playerArray);
 
+      })
+
+      thirdSquare.addEventListener('mouseover', function(){
+        console.warn("I'm hovering on green square");
+
+        thirdSquare.style.width = "350px";
+        thirdSquare.style.transition = "width 2s";
+
+      });
+
+      thirdSquare.addEventListener('mouseout', function(){
+        console.info("I'm leaving the green square");
+
+        thirdSquare.style.width = "150px";
+        thirdSquare.style.transition = "width 2s";
       })
 
       fourthSquare.style.height = "150px";
@@ -121,7 +153,22 @@
         playerArray.push("4");
         console.info(playerArray);
 
-      })
+      });
+
+      fourthSquare.addEventListener('mouseover', function(){
+        console.warn("I'm hovering on yellow square");
+
+        fourthSquare.style.width = "350px";
+        fourthSquare.style.transition = "width 2s";
+
+      });
+
+      fourthSquare.addEventListener('mouseout', function(){
+        console.info("I'm leaving the yellow square");
+
+        fourthSquare.style.width = "150px";
+        fourthSquare.style.transition = "width 2s";
+      });
 
       container.appendChild(firstSquare);
       container.appendChild(secondSquare);
