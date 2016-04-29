@@ -23,7 +23,22 @@
       container.style.position = "relative";
       container.style.left = "45%";
 
+
       document.body.appendChild(container);
+
+      var rotateButton = document.createElement('button');
+      rotateButton.style.width = "75px";
+      rotateButton.style.height = "25px";
+      rotateButton.style.backgroundColor = "magenta";
+      document.body.appendChild(rotateButton);
+
+      rotateButton.addEventListener('click', function(){
+
+        console.log('button clicked');
+        container.style.transform = "rotate(180deg)";
+        container.style.transition = "all 2s";
+
+      });
 
       let firstSquare = document.createElement('div');
       let secondSquare = document.createElement('div');
@@ -35,6 +50,7 @@
       firstSquare.style.backgroundColor = "blue";
 
       firstSquare.style.position = "absolute";
+      //firstSquare.style.opacity = ".5"
       firstSquare.style.display = "inline-block";
       firstSquare.className = ('firstSquare');
 
@@ -60,7 +76,7 @@
       firstSquare.addEventListener('mouseover', function(){
         console.warn("I'm hovering on blue square");
 
-        firstSquare.style.width = "350px";
+        firstSquare.style.width = "300px";
         firstSquare.style.transition = "width 2s";
 
       });
@@ -93,7 +109,7 @@
       secondSquare.addEventListener('mouseover', function(){
         console.warn("I'm hovering on red square");
 
-        secondSquare.style.width = "350px";
+        secondSquare.style.width = "300px";
         secondSquare.style.transition = "width 2s";
 
       });
@@ -116,6 +132,7 @@
       thirdSquare.style.display = "inline-block";
       thirdSquare.style.left = "150px";
       thirdSquare.className = "thirdSquare";
+      thirdSquare.style.opacity = ".75";
       thirdSquare.addEventListener('click', function(){
 
         playerArray.push("2");
@@ -126,7 +143,7 @@
       thirdSquare.addEventListener('mouseover', function(){
         console.warn("I'm hovering on green square");
 
-        thirdSquare.style.width = "350px";
+        thirdSquare.style.width = "300px";
         thirdSquare.style.transition = "width 2s";
 
       });
@@ -140,6 +157,7 @@
 
       fourthSquare.style.height = "150px";
       fourthSquare.style.width = "150px";
+      fourthSquare.style.opacity = ".75"
       fourthSquare.style.backgroundColor = "yellow";
       // fourthSquare.style.left = "37%";
       // fourthSquare.style.top = "27%";
@@ -158,8 +176,9 @@
       fourthSquare.addEventListener('mouseover', function(){
         console.warn("I'm hovering on yellow square");
 
-        fourthSquare.style.width = "350px";
+        fourthSquare.style.width = "300px";
         fourthSquare.style.transition = "width 2s";
+
 
       });
 
